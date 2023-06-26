@@ -1,0 +1,93 @@
+{
+	"info": {
+		"_postman_id": "d881749e-70a7-44c7-9ff2-f611820935f1",
+		"name": "search suggestions",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25969146"
+	},
+	"item": [
+		{
+			"name": "import products from csv",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/home/mohamed/products.csv"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/products/import/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"products",
+						"import",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "list products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/products/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"products",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "search products",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://localhost:8000/search?q=LLDKDKD",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"search"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "LLDKDKD"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
