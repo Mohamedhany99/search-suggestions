@@ -20,8 +20,6 @@ Notes:
 
     2- the project is documented it`s api using Swagger docs you can access it using the link (localhost:8000/api/docs/)
 
-    3- the project can configure with rest framework authentication using tokens for authentication but will need to modify the accounts model to make it inherit from abstractbaseuser class.
+    3- the app database works on sqlite3.
 
-    4- the app database works on sqlite3.
-
-    5- if you want to run the test cases for the django tests run (python manage.py test)
+    4- if you want to run the test cases for the django tests run (python manage.py test)
